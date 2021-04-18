@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <title>Productos</title>
+    </head>
+
+    <body>
+        <br> 
+        <br> 
+        <table border="1">
+            <td>"Productos"</td>
+            <tr>
+                <th>Grupo</th><th>Imagen Producto</th><th>Descripcion</th>
+            </tr>
+            {% for p in productos %}
+                <tr>
+                    <td>{{ p.grupo }}</td>
+                    <td><img src="{{ p.imagen }}" width="150px"></td>
+                    <td>{{ p.descripcion }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <br> 
+        <br>
+        <br> 
+
+        <table border="1">
+            <td>"Productos decorados"</td>
+            <tr>
+                <th>Grupo</th><th>Imagen Cuerpo</th><th>Descripcion</th><th>Cabeza</th><th>Torso</th><th>Brazos</th><th>Piernas</th><th>Imagen Arma</th><th>Imagen Escudo</th><th>Imagen Montura</th>
+            </tr>
+            {% for pd in productosdecorados %}
+                <tr>
+                    <td>{{ pd.grupo }}</td>
+                    <td><img src="{{ pd.imagen }}" width="150px"></td>
+                    <td>{{ pd.descripcion }}</td>
+                    <td>{{ pd.cabeza }}</td>
+                    <td>{{ pd.torso }}</td>
+                    <td>{{ pd.brazos }}</td>
+                    <td>{{ pd.piernas }}</td>
+                
+                    <td><img src="{{ pd.imagenArma}}" width="150px"></td>
+                
+                    <td><img src="{{ pd.imagenEscudo}}" width="150px"></td>
+                  
+                    <td><img src="{{ pd.imagenMontura}}" width="150px"></td>
+
+
+
+                </tr>
+            {% endfor %}
+        </table>
+
+
+
+
+
+ 
+
+    </body>
+</html>
